@@ -2,6 +2,6 @@
 
 Clone and build the application with
 
-```npm install.
-
+```
+npm install.
 ```
