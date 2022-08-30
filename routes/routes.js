@@ -2,12 +2,15 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/allfilms", (req, res) => {
-  myControllers.viewAll(app, req, res);
+// add myControllers
+const myControllers = require("../controllers/controllers.js");
+
+router.get("/", (req, res) => {
+  myControllers.viewAll(req, res);
 });
 
 router.get("/film/:filmID", (req, res) => {
-  myControllers.viewItem(app, req, res);
+  myControllers.viewItem(req, res);
 });
 
 module.exports = router;

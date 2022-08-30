@@ -15,7 +15,10 @@ function viewAll(req, res) {
       if (err) {
         console.error(err);
       }
-      res.json(docs);
+      return res.render("films", {
+        title: "All Films",
+        films: docs,
+      });
     });
 }
 
